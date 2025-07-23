@@ -1,7 +1,277 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>LoveBridge Africa</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arial&display=swap" />
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    color: #333;
+  }
+
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  header .logo {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #e60000;
+  }
+
+  .header-buttons {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-buttons button {
+    padding: 6px 12px;
+    margin-left: 10px;
+    border: none;
+    background-color: #0066ff;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  /* Banner */
+  .banner {
+    background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+    position: relative;
+  }
+
+  .banner h1 {
+    font-size: 2.5em;
+    margin: 0;
+  }
+
+  /* Form Area */
+  .form-area {
+    background-color: #fff;
+    max-width: 400px;
+    margin: -50px auto 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .form-area h2 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .preferences {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+
+  .preferences div {
+    flex: 1;
+    margin: 0 5px;
+  }
+
+  /* Input Groups */
+  .input-group {
+    margin-bottom: 10px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  select, input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  /* Button */
+  .btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #e60000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .btn:hover {
+    background-color: #cc0000;
+  }
+
+  /* Sign-in with Google */
+  .google-signin {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .google-signin button {
+    background-color: #fff;
+    color: #444;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  /* Profiles Preview */
+  .profiles {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    container-style: all; /* fallback for older browsers */
+    padding: 20px;
+  }
+
+  .profile {
+    text-align: center;
+  }
+
+  .profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e60000;
+  }
+
+  .profile p {
+    margin-top: 8px;
+  }
+
+  /* Footer / Terms */
+  .footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #555;
+  }
+
+  /* Responsive */
+  @media(max-width: 500px) {
+    .preferences {
+      flex-direction: column;
+    }
+
+    .preferences div {
+      margin-bottom: 10px;
+    }
+
+    .profiles {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
 </head>
-<body><h1>Welcome to LoveBridge Africa</h1><a href="register.html">Register</a></body></html>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="logo">dating.com</div>
+  <div class="header-buttons">
+    <button>Sign in</button>
+  </div>
+</header>
+
+<!-- Banner -->
+<div class="banner">
+  <h1>Your World. Your Love.</h1>
+</div>
+
+<!-- Registration / Preferences Form -->
+<div class="form-area">
+  <h2>Find Your Match</h2>
+  <!-- Preferences -->
+  <div class="preferences">
+    <div>
+      <label>I am a:</label>
+      <select>
+        <option value="">Select</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <div>
+      <label>Seeking a:</label>
+      <select>
+        <option value="">Select</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <div>
+      <label>Between ages:</label>
+      <div style="display:flex; gap:5px;">
+        <input type="number" placeholder="From" min="18" max="100" />
+        <input type="number" placeholder="To" min="18" max="100" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Take a Chance Button -->
+  <button class="btn">Take a Chance</button>
+
+  <!-- Sign in with Google -->
+  <div class="google-signin">
+    <button>Sign in with Google</button>
+  </div>
+</div>
+
+<!-- Profiles Preview -->
+<div class="profiles">
+  <div class="profile">
+    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Profile 1" />
+    <p>Svitlana, Kyiv</p>
+    <p>Hello</p>
+  </div>
+  <div class="profile">
+    <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Profile 2" />
+    <p>Chen Wei, Zhengzhou</p>
+    <p>Hello</p>
+  </div>
+  <div class="profile">
+    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Profile 3" />
+    <p>Anaya, San Francisco</p>
+    <p>Hi!</p>
+  </div>
+</div>
+
+<!-- Terms & Privacy -->
+<div class="footer">
+  <p>
+    By clicking "Take a Chance" or signing in via Google, you agree with our <a href="#">Terms & Conditions</a>, <a href="#">Privacy Policy</a>, <a href="#">Cookie Policy</a>, and <a href="#">Content Policy</a>.
+  </p>
+</div>
+
+</body>
+  </html>
